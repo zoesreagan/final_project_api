@@ -11,14 +11,14 @@ class ApplicationController < Sinatra::Base
 
 require 'open-uri'
 
-get '/' do
+get '/' do #works
   {
     success: false,
     message: "Please consult the API documentation"
   }.to_json
 end
 
-not_foun do
+not_found do
   halt 404
 end
 

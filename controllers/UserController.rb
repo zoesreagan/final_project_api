@@ -8,3 +8,5 @@ get '/' do
     found_user: @user
   }.to_json
 end
+
+end 
