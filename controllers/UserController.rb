@@ -42,7 +42,7 @@ class UserController < ApplicationController
 		  		success: true,
 		  		user_id: user.id,
 			  	username: user.username,
-		  		message: 'you are logged in and you have a cookie attached to all the responses'
+		  		message: 'you are registered and now logged in and you have a cookie attached to all the responses'
 	  		}.to_json
       end
 
@@ -62,7 +62,7 @@ class UserController < ApplicationController
         user_name: user.first_name,
         user_id: user.id,
         username: user.username,
-        message: 'Login succsesful'
+        message: 'Login successful'
       }.to_json
     else
       {
