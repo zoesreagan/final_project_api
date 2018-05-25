@@ -18,7 +18,7 @@ class UserController < ApplicationController
   end
 
 
-  post '/register' do
+  post '/register' do ##working!
     user= User.new
 
     user.username = @payload[:username]
@@ -48,7 +48,7 @@ class UserController < ApplicationController
 
     end
 
-    post '/login' do
+    post '/login' do ##working!
     username = @payload[:username]
     password = @payload[:password]
     user = User.find_by username: username
@@ -72,7 +72,7 @@ class UserController < ApplicationController
     end
   end
 
-  get '/logout' do
+  get '/logout' do ##working!
 	  	session.destroy
 	  	{
 	  		success: true,
