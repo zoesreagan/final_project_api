@@ -10,7 +10,8 @@ class ApplicationController < Sinatra::Base
         )
 
 
-  register Sinatra::CrossOrigin
+  use Rack::MethodOverride
+  set :method_override, true
 
   use Rack::Session::Cookie,  :key => 'rack.session',
                               :path => '/',
@@ -21,7 +22,7 @@ require 'open-uri'
 get '/' do #works
   {
     success: false,
-    message: "Please consult the API documentation"
+    message: "Not here"
   }.to_json
 end
 
@@ -41,5 +42,5 @@ options '*' do
     response.headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept"
     end
 
-    
+
   end

@@ -5,4 +5,4 @@ INSERT INTO users (username, first_name, last_name, birth_date) VALUES ('RJS', '
 INSERT INTO users (username, first_name, last_name, birth_date) VALUES ('ZoeS', 'Zoe', 'Reagan', '1946-09-30');
 
 INSERT INTO responses (user_id, date_created, response_1) VALUES (1, '2018-05-17', 'To live for as long as I could. I would want full efforts to prolong my life, including
-efforts to restart my heart if it stops beating.' )
+efforts to restart my heart if it stops beating.' );
