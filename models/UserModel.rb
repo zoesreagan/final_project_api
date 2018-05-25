@@ -1,4 +1,4 @@
 class User < ActiveRecord::Base
-  has_one :response, dependent: :destroy
+  has_one :form, dependent: :destroy
     has_secure_password
-end 
+end

@@ -5,12 +5,13 @@ require 'sinatra/activerecord'
 #controllers
 require './controllers/ApplicationController'
 require './controllers/UserController'
-#response controller
+require './controllers/FormController'
+
 
 
 #models
 require './models/UserModel'
-require './models/ResponseModel'
+require './models/FormModel'
 
 #routes
 map ('/') {
@@ -21,4 +22,6 @@ map ('/user') {
   run UserController
 }
 
-#response controller
+map ('/form') {
+  run FormController
+}

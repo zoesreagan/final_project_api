@@ -11,7 +11,7 @@ CREATE TABLE users(
   birth_date DATE
 );
 
-CREATE TABLE responses(
+CREATE TABLE forms(
   id SERIAL PRIMARY KEY,
   user_id INT REFERENCES users(id),
   date_created DATE DEFAULT CURRENT_DATE,
