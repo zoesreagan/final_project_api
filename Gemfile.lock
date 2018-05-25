@@ -16,9 +16,14 @@ GEM
     bcrypt (3.1.12)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
+    ffi (1.9.23)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     json (2.1.0)
+    listen (3.1.5)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     method_source (0.9.0)
     minitest (5.11.3)
     mustermann (1.0.2)
@@ -29,6 +34,12 @@ GEM
     rack (2.0.5)
     rack-protection (2.0.1)
       rack
+    rb-fsevent (0.10.3)
+    rb-inotify (0.9.10)
+      ffi (>= 0.5.0, < 2)
+    rerun (0.13.0)
+      listen (~> 3.0)
+    ruby_dep (1.5.0)
     sinatra (2.0.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -51,6 +62,7 @@ DEPENDENCIES
   json
   pg
   pry
+  rerun
   sinatra
   sinatra-activerecord
   sinatra-cross_origin

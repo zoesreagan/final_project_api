@@ -1,9 +1,13 @@
+DROP DATABASE IF EXISTS final;
+CREATE DATABASE final;
+\c final
+
 CREATE TABLE users(
 	id SERIAL PRIMARY KEY,
-	username VARCHAR(64) NOT NULL
-	password_digest VARCHAR(256) NOT NULL
-  first_name VARCHAR(64) NOT NULL
-  last_name VARCHAR(64) NOT NULL 
+	username VARCHAR(64) NOT NULL,
+	-- password_digest VARCHAR(256) NOT NULL
+  first_name VARCHAR(64) NOT NULL,
+  last_name VARCHAR(64) NOT NULL,
   birth_date DATE
 );
 
@@ -20,4 +24,4 @@ CREATE TABLE responses(
   response_7 TEXT,
   response_8 TEXT,
   response_9 TEXT
-)
+);
