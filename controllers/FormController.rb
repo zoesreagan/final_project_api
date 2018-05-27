@@ -82,4 +82,42 @@ end
   end
 
 
+##update form route
+#working!
+  put '/:id' do
+    puts @payload
+    puts "this is payload ------------------"
+    @form = Form.find params[:id]
+    @form.user_id = session[:user_id]
+    @form.date_created = @payload[:date_created]
+    @form.response_1 = @payload[:response_1]
+    @form.response_2 = @payload [:response_2]
+    @form.response_3 = @payload [:response_3]
+    @form.response_4 = @payload [:response_4]
+    @form.response_5 = @payload [:response_5]
+    @form.response_6 = @payload [:response_6]
+    @form.response_7 = @payload [:response_7]
+    @form.response_8 = @payload [:response_8]
+    @form.response_9 = @payload [:response_9]
+    @form.save
+
+    {
+      success: true,
+      message: "You've updated your form with id \##{@form.id}",
+      updated_form: @form
+    }.to_json
+
+  end
+
+
+  delete '/:id' do #working!
+    @form = Form.find params[:id]
+    @form.destroy
+    {
+      success: true,
+      message: "Your form with the id of \##{@form.id} has been deleted"
+    }.to_json
+  end
+
+
 end
