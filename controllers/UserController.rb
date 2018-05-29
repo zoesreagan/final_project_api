@@ -103,6 +103,14 @@ class UserController < ApplicationController
 
   	end
 
+    # delete '/:id' do
+    #   @user = User.find params[:id]
+    #   @user.destroy
+    #   {
+    #     success: true,
+    #     message: "Your user with the id of \##{@user.id} has been deleted"
+    #   }.to_json
+    # end
 
 
 end

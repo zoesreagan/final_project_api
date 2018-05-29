@@ -3,6 +3,8 @@ class ApplicationController < Sinatra::Base
 	Bundler.require()
 
 
+register Sinatra::CrossOrigin
+
 #connect to database
   ActiveRecord::Base.establish_connection(
       :adapter => 'postgresql',
@@ -33,12 +35,14 @@ end
 configure do
     enable :cross_origin
   end #cross-origin
+
   set :allow_origin, :any
-  set :allow_methods, [:get, :post,:delete, :put, :options]
+  set :allow_methods, [:get, :post, :delete, :put, :options]
 
 options '*' do
     p "opi"
     response.headers['Allow'] = 'HEAD, GET, POST, PUT, PATCH, DELETE'
+		response.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
     response.headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept"
     end
 
