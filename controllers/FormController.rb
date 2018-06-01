@@ -43,15 +43,15 @@ get '/:id' do
     success: true,
     # form: @form,
     date_created: @date_created,
-    response_1: @response_1,
-    response_2: @response_2,
-    response_3: @response_3,
-    response_4: @response_4,
-    response_5: @response_5,
-    response_6: @response_6,
-    response_7: @response_7,
-    response_8: @response_8,
-    response_9: @response_9
+    response_1: @response_one,
+    response_2: @response_two,
+    response_3: @response_three,
+    response_4: @response_four,
+    response_5: @response_five,
+    response_6: @response_six,
+    response_7: @response_seven,
+    response_8: @response_eight,
+    response_9: @response_nine
   }.to_json
 end
 
@@ -63,15 +63,15 @@ end
     @form = Form.new #instantianting new class from Form model
     @form.user_id = session[:user_id]
     @form.date_created = @payload[:date_created]
-    @form.response_1 = @payload[:response_one]
-    @form.response_2 = @payload[:response_two]
-    @form.response_3 = @payload[:response_three]
-    @form.response_4 = @payload[:response_four]
-    @form.response_5 = @payload[:response_five]
-    @form.response_6 = @payload[:response_six]
-    @form.response_7 = @payload[:response_seven]
-    @form.response_8 = @payload[:response_eight]
-    @form.response_9 = @payload[:response_nine]
+    @form.response_1 = @payload[:response_1]
+    @form.response_2 = @payload[:response_2]
+    @form.response_3 = @payload[:response_3]
+    @form.response_4 = @payload[:response_4]
+    @form.response_5 = @payload[:response_5]
+    @form.response_6 = @payload[:response_6]
+    @form.response_7 = @payload[:response_7]
+    @form.response_8 = @payload[:response_8]
+    @form.response_9 = @payload[:response_9]
     @form.save
 
     {
