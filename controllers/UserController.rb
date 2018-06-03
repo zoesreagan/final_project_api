@@ -20,11 +20,11 @@ class UserController < ApplicationController
 
   post '/register' do ##working!
     user= User.new
-
-    user.username = @payload[:username]
-    user.password = @payload[:password]
     user.first_name = @payload[:first_name]
     user.last_name = @payload[:last_name]
+    user.username = @payload[:username]
+    user.password = @payload[:password]
+
 
     userExist = User.find_by username: user.username ##may need to change this
       if userExist
