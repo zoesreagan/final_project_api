@@ -42,7 +42,7 @@ configure do
 options '*' do
     p "opi"
     response.headers['Allow'] = 'HEAD, GET, POST, PUT, PATCH, DELETE'
-		response.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000' #will need to put in front end heroku location!
+		response.headers['Access-Control-Allow-Origin'] = 'https://behest-app.herokuapp.com' #will need to put in front end heroku location!
     response.headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept"
     end
 
